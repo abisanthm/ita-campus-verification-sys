@@ -25,7 +25,7 @@ class StudentController extends Controller
     public function index()
     {
         $studentService = new StudentService();
-        $students = $studentService->getStudentsData(10);
+        $students = Student::all();
         return view('modules.students.index', ['students' => $students]);
     }
 
